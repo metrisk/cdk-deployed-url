@@ -1,11 +1,7 @@
-name: 'Your name here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: 'CDK Deployed URL'
+description: 'Obtains the deployment URL when using CDK'
+author: 'Metrisk'
 inputs:
-  milliseconds: # change this
-    required: true
-    description: 'input description here'
-    default: 'default value if applicable'
 runs:
   using: 'node12'
   main: 'dist/index.js'
