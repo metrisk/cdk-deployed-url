@@ -1,7 +1,6 @@
 name: 'CDK Deployed URL'
 description: 'Obtains the deployment URL when using CDK'
 author: 'Metrisk'
-inputs:
 runs:
   using: 'node12'
   main: 'dist/index.js'
