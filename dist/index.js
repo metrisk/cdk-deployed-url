@@ -47,7 +47,8 @@ function getDeploymentUrl() {
             const cdkOutJsonPath = path_1.default.join(process.cwd(), './cdk.out.json');
             if (fs_1.default.existsSync(cdkOutJsonPath)) {
                 const output = require(path_1.default.join(process.cwd(), './cdk.out.json'));
-                const details = output[`${process.env.CDK_STACKNAME}-${process.env.STAGE}`];
+                core.info(JSON.stringify(output));
+                const details = output[`${process.env.CDK_STACKNAME}`];
                 core.info(JSON.stringify(details));
                 core.setOutput('cdk_deployment_url', Object.values(details)[0]);
                 return;
